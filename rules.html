@@ -4,6 +4,7 @@
     <title>Aneury's Guessing Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href = "css/styles.css" rel ="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -11,7 +12,9 @@
     <![endif]-->
   </head>
   <body>
+
     <div class="container">
+
       <header class="page-header">
         <ul class = "nav nav-tabs pull-right">
           <li><a href="index.html">Home</a></li>
@@ -20,55 +23,61 @@
         </ul>
         <h3>The Guessing Game</h3>
       </header>
+
       <div class="jumbotron">
         <h1>The Rules</h1>
       </div>
+
       <div class="row">
-        <div class="col-sm-6">
-          <h3>1. When the game begins, I will pick a random number between 1-100.</h3>
-        </div>
-        <div class="col-sm-6">
-          <h3>2. You will have 5 opportunities to find this number.</h3>
+        <div class="col-sm-12">
+          <h3>First, I will pick a random number between 1-100.</h3>
         </div>
       </div>
-      <br>
-      <br>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Then, you will have 5 chances to guess this number.</h3>
+        </div>
+      </div>
+
       <div class = "row">
-        <div class="col-sm-6">
-          <h3>3. Every time you guess, I will tell you whether you are super cold, cold, hot, super hot.</h3>
+        <div class="col-sm-12">
+          <h3>Every time you guess, I will tell you whether you are</h3>
           <div class = "row">
             <div class = "col-sm-3">
-              Super cold > 40
+              <p>Super Cold</p>
+              <p> Within 40 </p>
             </div>
             <div class = "col-sm-3">
-              Cold > 30
+              <p>Cold</p>
+              <p> Within 30 </p>
             </div>
             <div class = "col-sm-3">
-              Hot < 20
+              <p>Hot</p>
+              <p> Within 10 </p>
             </div>
             <div class = "col-sm-3">
-              Super Hot < 10
+              <p>Super Hot</p>
+              <p> Within 5 </p>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <h3>4. Don't worry if you lose, because you can just try. </h3>
-        </div>
       </div>
-      <br>
-      <br>
+
       <div class ="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
           <h3>So can you guess my number?</h3>
         </div>
-        <div class = "col-sm-6">
-          <a class = "btn btn-success btn-lg" href="Game.html">Play Game</a>
-        </div>
       </div>
-      <br>
-      <br>
+
+      <center>
+        <a class = "btn btn-success btn-lg" href="game.html">Play Game</a>
+      </center>
+
       <div>
-        <h3>&copy; 2015 Fullstack Foundations. Aneury Casado</h3>
+        <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
       </div>
+
     </div>
+
   </body>

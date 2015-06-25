@@ -1,0 +1,12 @@
+.container {
+  max-width: 1000px
+  text-align:center;
+}
+
+.jumbotron{
+  text-align: center;
+}
+
+.col-sm-12 {
+  text-align: center;
+}
