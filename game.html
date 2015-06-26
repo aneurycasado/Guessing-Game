@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href = "css/styles.css" rel ="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -28,25 +23,49 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class = "modal fade" id="response">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class ="modal-header">
+            <button type ="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class ="modal-title">Response</h4>
+          </div>
+          <div class ="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="container">
       <div class="jumbotron">
         <h1>Give me your best guess</h1>
-        <div class ="form-group">
-          <input type="text" class="form-control" id="guess" placeholder="Type your guess here">
+
+        <div class ="row">
+          <div class = "col-sm-2">
+          </div>
+          <div class = "col-sm-8">
+            <div class ="form-group">
+              <input type="text" class="form-control input-lg" id="guess" placeholder="Type your guess here">
+            </div>
+          </div>
         </div>
+
         <p class = "btn-group">
-          <a class = "btn btn-primary btn-lg" href="#">Submit</a>
+          <a class = "btn btn-primary btn-lg" data-toggle="modal" href="#response">Submit</a>
           <a class = "btn btn-default btn-lg" href="#">Hint</a>
         </p>
+
       </div>
 
     </div>
 
-      <div>
-        <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
-      </div>
-
+    <div>
+      <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
     </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
   </body>
+
+</html>

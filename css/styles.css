@@ -56,3 +56,8 @@ body {
 .btn-primary {
 	background-color: #3a87ad;
 }
+
+.form-group{
+	padding: 20px;
+	margin-top: 20px;
+}
