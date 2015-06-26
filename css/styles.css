@@ -1,7 +1,19 @@
+
+body {
+	padding: 50px;
+
+}
+
+#myCarousel {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .container {
-  max-width: 1000px
+	max-width: 1000px;
   text-align:center;
 }
+
 
 .jumbotron{
   text-align: center;
@@ -9,4 +21,23 @@
 
 .col-sm-12 {
   text-align: center;
+}
+
+.glyphicon {
+  font-size: 3em;
+  display: inline;
+  color: #3a87ad;
+}
+
+.carousel-indicators {
+	bottom: 0;
+}
+
+.carousel-indicators .active {
+	bottom: 0;
+	background-color: #3a87ad;
+}
+
+.carousel-indicators li {
+	background-color:
 }
