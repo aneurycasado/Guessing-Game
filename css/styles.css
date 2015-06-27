@@ -10,6 +10,11 @@ img {
     width: auto\9; /* ie8 */
 }
 
+.label {
+	font-size: .5em;
+
+}
+
 #myCarousel {
 	width: 100%;
 	max-height: 75%;
