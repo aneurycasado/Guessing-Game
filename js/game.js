@@ -4,6 +4,7 @@ $(function(){
   var numberOfGuesses = 5
   $("#submit").click(function(){
     numberOfGuesses-=1
+    updateNumberOfGuesses(numberOfGuesses)
     var guess = parseInt($("#guess").val())
     if(gameOver(numberOfGuesses,randomNumber,guess)){
       loser()
@@ -37,10 +38,20 @@ $(function(){
         }
       }
     });
+    $("#hint").click(function(){
+      var header = "<h2>Well, just know you lost already but the answer is</h2>"
+      var body = "<h1>" + randomNumber.toString() + "</h2>"
+      setModalWindow(header,body)
+    })
 })
 
 function pickRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
+}
+
+function updateNumberOfGuesses(numberOfGuesses){
+  var string = numberOfGuesses.toString()
+  $("#number").html('<span class="label label-primary">Guesses Left: ' + string +'</span></h1>')
 }
 
 function gameOver(numberOfGuesses,randomNumber,guess){
