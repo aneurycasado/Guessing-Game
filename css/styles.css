@@ -1,12 +1,12 @@
 
 body {
-	padding: 50px;
+	padding-top: 50px;
 
 }
 
 #myCarousel {
 	width: 100%;
-	height: 100%;
+	max-height: 75%;
 }
 
 .container {
@@ -14,15 +14,23 @@ body {
   text-align:center;
 }
 
-.container-rule {
-	max-width: 1000px;
-  text-align:center;
-}
-
-
 .jumbotron{
-  text-align: center;
+	background: #f2f9fe; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2f9fe), color-stop(100%,#d6f0fd)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%,#d6f0fd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%,#d6f0fd 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%,#d6f0fd 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #f2f9fe 0%,#d6f0fd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9fe', endColorstr='#d6f0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+
+
+}
+
+
 
 .col-sm-12 {
   text-align: center;
@@ -34,13 +42,19 @@ body {
   color: #3a87ad;
 }
 
+.item .glyphicon {
+  font-size: 7em;
+  display: inline;
+  color: #2C3539;
+}
+
 .carousel-indicators {
 	bottom: 0;
 }
 
 .carousel-indicators .active {
 	bottom: 0;
-	background-color: #3a87ad;
+
 }
 
 .carousel-indicators li {
@@ -48,8 +62,6 @@ body {
 }
 
 .btn{
-	margin-top: 20px;
-	margin-bottom: 20px;
 	padding: 20px;
 }
 

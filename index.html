@@ -9,11 +9,10 @@
   </head>
 
   <body>
-
   <!--NavBar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <a class ="navbar-brand text-muted" href ="game.html">Guessing Game</a>
+        <a class ="navbar-brand text-info" href ="game.html">Guessing Game</a>
         <div class ="collapse navbar-collapse">
           <ul class = "nav navbar-nav navbar-right">
             <li class = "active"><a href="index.html">Home</a></li>
@@ -24,58 +23,70 @@
       </div>
     </div>
     <!--NavBar -->
-
     <!--Carousel -->
+
     <div id ="myCarousel" class ="carousel slide jumbotron">
+
       <div class="container">
+
         <ol class ="carousel-indicators">
           <li class ="active" data-target="#myCarousel" data-slide-to="0"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
-
         </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <h1>Think you can guess my number.</h1>
 
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <h1>Think you can guess my number?</h1>
+            <b class = "glyphicon glyphicon-user"></b>
           </div>
+
           <div class="item">
-            <h1>Having second thoughts?</h1>
+            <h1>What's wrong.Having second thoughts?</h1>
+            <b class = "glyphicon glyphicon-question-sign"></b>
           </div>
+
           <div class="item">
-            <h1>Seriously, press play already</h1>
+            <h1>Seriously, press play already!!</h1>
+            <b class = "glyphicon glyphicon-arrow-down"></b>
           </div>
+
         </div>
+
       </div>
+
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
         <span class ="icon-prev"></span>
       </a>
+
       <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <span class ="icon-next"></span>
       </a>
+
     </div>
     <!--Carousel -->
-
     <!--Buttons -->
-    <center>
-      <div class = "btn-group">
-        <a class = "btn btn-primary btn-lg" href="game.html">Play My Game</a>
-        <a class = "btn btn-default btn-lg" href="rules.html">Learn My Rules</a>
+    <div class ="row">
+      <div class = "col-sm-12"
+        <div class = "btn-group">
+          <a class = "btn btn-primary btn-lg" href="game.html">Play My Game</a>
+          <a class = "btn btn-default btn-lg" href="rules.html">Learn My Rules</a>
+        </div>
       </div>
-    </center>
+    </div>
     <!--Buttons -->
-
     <!--Copyright -->
-    <div>
-      <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
+    <div class = "row">
+      <div class = "col-sm-8"
+        <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
+      </div>
     </div>
     <!--Copyright -->
-
     <!--Scripts -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!--Scripts -->
-
   </body>
 
 </html>

@@ -10,9 +10,9 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <a class ="navbar-brand text-muted" href ="game.html">Guessing Game</a>
+        <a class ="navbar-brand text-info" href ="game.html">Guessing Game</a>
         <div class ="collapse navbar-collapse">
           <ul class = "nav navbar-nav navbar-right">
             <li><a href="index.html">Home</a></li>
@@ -36,36 +36,58 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Give me your best guess</h1>
+    <div class="jumbotron">
+
+      <div class="container">
 
         <div class ="row">
-          <div class = "col-sm-2">
-          </div>
-          <div class = "col-sm-8">
-            <div class ="form-group">
-              <input type="text" class="form-control input-lg" id="guess" placeholder="Type your guess here">
-            </div>
+          <div class = "col-sm-12">
+            <h1>Give me your best guess</h1>
           </div>
         </div>
 
-        <p class = "btn-group">
-          <a class = "btn btn-primary btn-lg" data-toggle="modal" href="#response">Submit</a>
-          <a class = "btn btn-default btn-lg" href="#">Hint</a>
-        </p>
+        <div class = "row">
+          <div class = "col-sm-2">
+          </div>
+          <div class = "col-sm-8">
+            <h1><span class="label label-default">Indicator</span></h1>
+          </div>
+        </div>
+
+        <div class ="row">
+          <div class = "col-sm-4">
+          </div>
+          <div class = "col-sm-4">
+            <div class ="form-group">
+              <input type="text" class="form-control input-lg" id="guess" placeholder="Type your guess">
+            </div>
+          </div>
+          <div class = "col-sm-4">
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class = "col-sm-12">
+            <p class = "btn-group">
+              <a id ="submit" class = "btn btn-primary btn-lg" data-toggle="modal" href="#response">Submit</a>
+              <a id ="hint" class = "btn btn-default btn-lg" href="#">Hint</a>
+            </p>
+          </div>
+        </div>
 
       </div>
 
     </div>
 
-    <div>
-      <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
+    <div class = "row">
+      <div class = "col-sm-8"
+        <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
+      </div>
     </div>
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script src ="js/game.js"></script>
   </body>
 
 </html>
