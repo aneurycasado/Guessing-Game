@@ -20,16 +20,23 @@ $(function(){
             yourGoingToLose()
           }
         }else{
-          difference = Math.abs(randomNumber - guess)
+          var difference = randomNumber - guess
+          var direction = ""
           console.log(difference == 0)
+          if(difference > 0){
+            direction = "Higher"
+          }else{
+            direction = "Lower"
+          }
+          difference = Math.abs(difference)
           if(difference > 40){
-            superCold()
+            superCold(direction)
           }else if(difference > 20 && difference < 40){
-            cold()
+            cold(direction)
           }else if(difference < 20 && difference > 10){
-            warm()
+            warm(direction)
           }else if(difference < 10 && difference != 0){
-            hot()
+            hot(direction)
           }else if(difference === 0){
             winner()
           }else{
@@ -104,33 +111,33 @@ function yourGoingToLose(){
   illegalMove();
 }
 
-function superCold(){
+function superCold(direction){
   $("#talk").html("We have found the cure to global warming people.")
-  $("#indicator").html('<span class="label label-primary">Super Cold</span></h1>')
+  $("#indicator").html('<span class="label label-primary">Super Cold. Guess ' + direction + '</span></h1>')
   var header = "<h2>You're colder than this place!</h2>"
   var body = '<img src="img/supercold.png" alt="Super Cold">'
   setModalWindow(header,body)
 }
 
-function cold(){
+function cold(direction){
   $("#talk").html("You are as cold as Lebron.")
-  $("#indicator").html('<span class="label label-success">Cold</span></h1>')
+  $("#indicator").html('<span class="label label-success">Cold. Guess ' + direction + '</span></h1>')
   var header = "<h2>Can you find that corner?</h2>"
   var body = '<img src="img/cold.jpg" alt="Cold">'
   setModalWindow(header,body)
 }
 
-function warm(){
+function warm(direction){
   $("#talk").html("O, it's getting kind of toasty in here.")
-  $("#indicator").html('<span class="label label-warning">Warm</span></h1>')
+  $("#indicator").html('<span class="label label-warning">Warm. Guess ' + direction + '</span></h1>')
   var header = "<h2>A joke for your success.</h2>"
   var body = '<img src="img/warm.png" alt="Warm">'
   setModalWindow(header,body)
 }
 
-function hot(){
+function hot(direction){
   $("#talk").html("Maybe I should have you play the lotto for me.")
-  $("#indicator").html('<span class="label label-danger">Hot</span></h1>')
+  $("#indicator").html('<span class="label label-danger">Hot. Guess ' + direction + '</span></h1>')
   var header = "<h2>You're about to erupt!!</h2>"
   var body = '<img src="img/hot.png" alt="Hot">'
   setModalWindow(header,body)
