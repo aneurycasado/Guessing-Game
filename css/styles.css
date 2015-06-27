@@ -4,6 +4,12 @@ body {
 
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
 #myCarousel {
 	width: 100%;
 	max-height: 75%;
@@ -25,12 +31,13 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9fe', endColorstr='#d6f0fd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-
-
+.modal-body {
+	text-align: center;
 }
 
-
+.modal-title {
+	text-align: center;
+}
 
 .col-sm-12 {
   text-align: center;
