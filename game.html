@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Aneury's Guessing Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href = "css/styles.css" rel ="stylesheet">
   </head>
-
   <body>
-
+<!--Navbar-->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <button type ="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,7 +25,8 @@
         </div>
       </div>
     </div>
-
+<!--End ofNavbar-->
+<!--Modal window-->
     <div class = "modal fade" id="response">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -40,17 +39,18 @@
         </div>
       </div>
     </div>
-
+<!--End of Modal window-->
+<!--Main content-->
     <div class="jumbotron">
-
       <div class="container">
-
+<!--Talk from me-->
         <div class ="row">
           <div class = "col-sm-12">
             <h1 id ="talk">Give me your best guess</h1>
           </div>
         </div>
-
+<!--End of Talk from me-->
+<!--GuessesLeft-->
         <div class = "row">
           <div class = "col-sm-2">
           </div>
@@ -58,7 +58,8 @@
             <h1 id ="number"><span class="label label-primary">Guesses Left: 5</span></h1>
           </div>
         </div>
-
+<!--End of GuessesLeft-->
+<!--User Guesses so Far-->
         <div class = "row">
           <div class = "col-sm-2">
           </div>
@@ -66,8 +67,8 @@
             <h1 id ="guessesSoFar"><span class="label label-info">No Guesses So Far</span></h1>
           </div>
         </div>
-
-
+<!--End of User Guesses so Far-->
+<!--Temperature Indicator-->
         <div class = "row">
           <div class = "col-sm-2">
           </div>
@@ -75,7 +76,8 @@
             <h1 id ="indicator"><span class="label label-default">Indicator</span></h1>
           </div>
         </div>
-
+<!--End of Temperature Indicator-->
+<!--Judgement-->
         <div class = "row">
           <div class = "col-sm-2">
           </div>
@@ -83,7 +85,8 @@
             <h1 id ="judgement"><span class="label label-default">Judgement</span></h1>
           </div>
         </div>
-
+<!--End of Judgement-->
+<!--Input-->
         <div class ="row">
           <div class = "col-sm-4">
           </div>
@@ -95,9 +98,8 @@
           <div class = "col-sm-4">
           </div>
         </div>
-
-
-
+<!--End of Input-->
+<!--Buttons-->
         <div class = "row">
           <div class = "col-sm-12">
             <p class = "btn-group">
@@ -106,20 +108,21 @@
             </p>
           </div>
         </div>
-
+<!--End of Buttons-->
       </div>
-
     </div>
-
+<!--End of Main content-->
+<!--Copyright-->
     <div class = "row">
       <div class = "col-sm-8"
         <p>&copy; 2015 Fullstack Foundations. Aneury Casado</p>
       </div>
     </div>
-
+<!--End of Copyright-->
+<!--Scripts-->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src ="js/game.js"></script>
+<!--End of Scripts-->
   </body>
-
 </html>
