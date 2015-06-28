@@ -1,8 +1,15 @@
+//This function waits until the document is ready
 $(function(){
+//This function picks my number
   var randomNumber = pickRandomNumber(1,100)
-  console.log(randomNumber)
   var numberOfGuesses = 5
+//I use guessesSoFar to keep track of the guess and the temperature
+//associated with that guess
   var guessesSoFar = [[],[]]
+//Previous difference keeps track of the last guess
+//It is used to update the judgment label
+  var previousDifference = 0
+//Here, I use jquery to select 
   $("#submit").click(function(){
     numberOfGuesses-=1
     updateNumberOfGuesses(numberOfGuesses)
@@ -35,6 +42,16 @@ $(function(){
             direction = "Lower"
           }
           difference = Math.abs(difference)
+          if(previousDifference == 0){
+            previousDifference = difference
+          }
+          if(difference > previousDifference){
+            judgement('Colder')
+          }else if(difference < previousDifference){
+            judgement('Hotter')
+          }else if(difference == previousDifference){
+            judgement("Same")
+          }
           if(difference > 40){
             guessesSoFar = updateGuessesSoFar(guess,'SC',guessesSoFar)
             superCold(direction)
@@ -52,6 +69,7 @@ $(function(){
           }else{
             thereIsNoHelpingYou()
           }
+          previousDifference = difference
         }
       }
     });
@@ -66,6 +84,17 @@ $(function(){
       }
     });
 })
+
+
+function judgement(string){
+  if(string == "Hotter"){
+    $("#judgement").html('<span class="label label-danger">' + string +'</span>')
+  }else if(string == "Colder"){
+    $("#judgement").html('<span class="label label-info">' + string +'</span>')
+  }else{
+    $("#judgement").html('<span class="label label-default">' + string +'</span>')
+  }
+}
 
 function updateGuessesSoFar(guess,temp,guessesSoFar){
   guessesSoFar[0].push(guess)
@@ -176,7 +205,7 @@ function cold(direction){
 function warm(direction){
   $("#talk").html("O, it's getting kind of toasty in here.")
   $("#indicator").html('<span class="label label-warning">Warm. Guess ' + direction + '</span></h1>')
-  var header = "<h2>A joke for your success.</h2>"
+  var header = "<h2>A joke for your good attempt.</h2>"
   var body = '<img src="img/warm.png" alt="Warm">'
   setModalWindow(header,body)
 }
